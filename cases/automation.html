@@ -42,7 +42,7 @@
   <h1>Автоматизация отчётности</h1>
 
   <h2>🎯 Цель</h2>
-  <p>Сократить время на ручной сбор, обработку и создание отчётов.</p>
+  <p>Сократить время ручной работы на сбор, обработку и создание отчётов.</p>
 
   <h2>📂 Автоматизация:</h2>
   <ul>   
@@ -62,8 +62,8 @@
     
     <h4>Python</h4>
   <p>Для примера взяты <a href="https://www.kaggle.com/datasets/kyanyoga/sample-sales-data">данные</a> из свободного доступа.</p>
-  <p><pre style="background:#f4f4f4; padding:1rem; overflow-x:auto; font-size:0.9rem;">
-<code>  # Import
+  <pre style="background:#f4f4f4; padding:1rem; overflow-x:auto; font-size:0.9rem;"><code>
+  # Import
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -86,7 +86,7 @@ with pd.ExcelWriter("sales_report.xlsx") as writer:
     by_product.to_frame(name="Total Sales").to_excel(writer, sheet_name="By Product")
     by_country.to_frame(name="Total Sales").to_excel(writer, sheet_name="By Country")
 
-print("Отчёт сохранён")</code></pre></p>
+print("Отчёт сохранён")</code></pre>
     <img src="../assets/automation/python_script_pic.png" alt="Python сохраняемый график" style="max-width:100%;; margin:1rem 0;">
     <img src="../assets/automation/python_script_excel.png" alt="Результат работы скрипта в Excel" style="max-width:30%;; margin:1rem 0;">
 
