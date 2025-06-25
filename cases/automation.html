@@ -57,10 +57,36 @@
     <img src="../assets/automation/selenium_IDE.png" alt="Работа selenium в IDE" style="max-width:100%; margin:1rem 0;">
     <img src="../assets/automation/selenium_result.png" alt="Результат парсинга" style="max-width:100%; margin:1rem 0;">
 
-    <h4>Макрос Excel VBA</h4>:
-    <img src="../assets/automation/vba.png" alt="VBA код" style="max-width:100%;; margin:1rem 0;">
+    <h4>Макрос Excel VBA</h4>
+    <img src="../assets/automation/vba.png" alt="VBA код" style="max-width:60%; margin:1rem 0;">
     
-    <h4>Python</h4>    
+    <h4>Python</h4>
+  <p><pre style="background:#f4f4f4; padding:1rem; overflow-x:auto; font-size:0.9rem;">
+<code>
+  # Import
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Loading
+df = pd.read_csv("sales_data_sample.csv", encoding="latin1")
+
+# Group
+by_product = df.groupby("PRODUCTLINE")["SALES"].sum().sort_values(ascending=False)
+by_country = df.groupby("COUNTRY")["SALES"].sum().sort_values(ascending=False)
+
+# Graphic
+top10 = by_product.head(10)
+top10.plot(kind="bar", figsize=(10, 5), title="Top 10 продуктов по продажам")
+plt.ylabel("Сумма продаж ($)")
+plt.tight_layout()
+plt.savefig("top_products.png")
+
+# Export to Excel
+with pd.ExcelWriter("sales_report.xlsx") as writer:
+    by_product.to_frame(name="Total Sales").to_excel(writer, sheet_name="By Product")
+    by_country.to_frame(name="Total Sales").to_excel(writer, sheet_name="By Country")
+
+print("Отчёт сохранён")</code></pre></p>
     <img src="../assets/automation/python_script_pic.png" alt="Python сохраняемый график" style="max-width:100%;; margin:1rem 0;">
     <img src="../assets/automation/python_script_excel.png" alt="Результат работы скрипта в Excel" style="max-width:30%;; margin:1rem 0;">
 
