@@ -11,6 +11,7 @@
 |----------------|------------------|
 | [Сегментация клиентской базы](cases/segmentation.html) | Анализ и разбиение клиентской базы, снижение оттока на 15% |
 | [Автоматизация отчётности](cases/automation.html) | Сокращение рутинной работы на 40% |
+| [Интерактивный дашборд](cases/dashboard.html) | Автоматический сбор и визуализация данных |
 | [Сквозная аналитика](cases/crossanalytics.html) | Объединение маркетинговых и клиентских данных |
 | [Кластеризация аудитории](cases/clustering.html) | ML-проект по сегментированию покупателей |
 
@@ -19,8 +20,10 @@
 - MS Excel, Power Pivot
 - Python (Pandas, Seaborn, Matplotlib, NumPy)
 - Selenium
+- API
 - Google Sheets
 - Power BI
+- Looker Studio
 
 ## Контакты
 Email: bobatin@ya.ru
